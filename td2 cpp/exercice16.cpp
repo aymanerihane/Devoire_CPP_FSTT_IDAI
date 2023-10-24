@@ -33,7 +33,7 @@ public:
     }
     void afficher(){
         Element* actuel=head;
-        cout << actuel<< " ";
+        cout << actuel->nombre<< " ";
         actuel=actuel->next;
     }
 };
@@ -50,7 +50,7 @@ int main() {
 
     maListe.supprimer();
 
-    cout << "Liste après suppression : ";
+    cout << "Liste apres suppression : ";
     maListe.afficher();
 
     return 0;
