@@ -1,20 +1,19 @@
-
 #include <iostream>
 #include <math.h>
 using namespace std;
 
 class Vecteur3d{
   private:
-    float x,y,z;
+  float x,y,z;
 
   public:
-    Vecteur3d():x(0.0),y(0.0),z(0.0){}
-    Vecteur3d(float x, float y, float z):x(x),y(y),z(z){}
+  Vecteur3d():x(0.0),y(0.0),z(0.0){}
+  Vecteur3d(float x, float y, float z):x(x),y(y),z(z){}
     void afficher(){
         cout << "("<<x<<","<<y<<","<<z<<")"<<endl;
     }
     Vecteur3d somme(Vecteur3d vect1){
-        cout <<"la somme est:"<<endl; 
+        cout <<"la somme est:"<<endl;
         return Vecteur3d(vect1.x+x,vect1.y+y,vect1.z+z);
     }
     Vecteur3d produit(Vecteur3d vect1){
@@ -44,9 +43,8 @@ class Vecteur3d{
 
 int main() {
     Vecteur3d vect1(2,4,5),vect2(6,7,8);
-    Vecteur3d* pte=vect1;
-    
-    vect1.somme(ptr).afficher();
+
+    vect1.somme(vect2).afficher();
     vect1.produit(vect2);
     vect1.normax(vect2);
 
